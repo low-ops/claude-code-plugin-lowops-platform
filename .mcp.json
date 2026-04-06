@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "lowops": {
+      "type": "http",
+      "url": "${user_config.mcp_base_url}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_token}"
+      }
+    }
+  }
+}

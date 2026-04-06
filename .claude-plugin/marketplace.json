@@ -1,0 +1,26 @@
+{
+  "name": "lowops-platform-marketplace",
+  "owner": {
+    "name": "LowOps Platform"
+  },
+  "metadata": {
+    "description": "Marketplace entry for the LowOps Platform Claude Code plugin (same repository).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "lowops-platform",
+      "source": "./",
+      "description": "LowOps Platform: MCP-powered deploy and service management from Claude Code.",
+      "author": {
+        "name": "LowOps Platform"
+      },
+      "keywords": [
+        "lowops",
+        "mcp",
+        "deploy",
+        "platform"
+      ]
+    }
+  ]
+}

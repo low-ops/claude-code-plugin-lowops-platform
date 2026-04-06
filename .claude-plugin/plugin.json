@@ -1,0 +1,28 @@
+{
+  "name": "lowops-platform",
+  "description": "LowOps Platform integration for Claude Code via MCP (deploy and manage services).",
+  "version": "0.1.0",
+  "author": {
+    "name": "LowOps Platform"
+  },
+  "keywords": [
+    "lowops",
+    "mcp",
+    "deploy",
+    "platform"
+  ],
+  "userConfig": {
+    "mcp_base_url": {
+      "type": "string",
+      "title": "MCP base URL",
+      "description": "LowOps MCP server base URL (no trailing slash), e.g. https://mcp.lowops.example.com",
+      "sensitive": false
+    },
+    "api_token": {
+      "type": "string",
+      "title": "API token",
+      "description": "Bearer token for LowOps MCP (if required by your deployment)",
+      "sensitive": true
+    }
+  }
+}
