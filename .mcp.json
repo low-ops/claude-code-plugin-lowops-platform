@@ -1,11 +1,8 @@
 {
   "mcpServers": {
-    "lowops": {
+    "low-ops": {
       "type": "http",
-      "url": "${user_config.mcp_base_url}/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.api_token}"
-      }
+      "url": "https://portal.trial.low-ops.com/mcp"
     }
   }
 }
