@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/low-ops/claude-code-plugin-lowops-platform/compare/v0.2.0...v0.2.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* mcp server auth ([8f8ded4](https://github.com/low-ops/claude-code-plugin-lowops-platform/commit/8f8ded45f1f8be5d09d90470b91b53120822ea0c))
+
 ## [0.2.0](https://github.com/low-ops/claude-code-plugin-lowops-platform/compare/v0.1.0...v0.2.0) (2026-04-06)
 
 
