@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/low-ops/claude-code-plugin-lowops-platform/compare/v0.3.0...v0.4.0) (2026-04-22)
+
+
+### Features
+
+* add deployment waiter subagent ([f2bb143](https://github.com/low-ops/claude-code-plugin-lowops-platform/commit/f2bb14312fc0a60beb6dc64daa6cf547d9fed1fd))
+
 ## [0.3.0](https://github.com/low-ops/claude-code-plugin-lowops-platform/compare/v0.2.1...v0.3.0) (2026-04-22)
 
 
