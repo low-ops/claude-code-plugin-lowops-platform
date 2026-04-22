@@ -10,7 +10,7 @@ This skill is a **lightweight guide**. Authoritative behavior lives in the **MCP
 ## Setup
 
 1. Install the `lowops-platform` plugin from this repo's marketplace (see repository README).
-2. When prompted, set **MCP base URL** and **API token** (`userConfig`).
+2. When prompted, set **MCP URL** (plugin `userConfig` / `.mcp.json` templating).
 3. Confirm the MCP connection in Claude Code (`/mcp`).
 
 ## Using the platform

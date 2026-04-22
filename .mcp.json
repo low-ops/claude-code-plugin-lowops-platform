@@ -2,7 +2,7 @@
   "mcpServers": {
     "low-ops": {
       "type": "http",
-      "url": "https://portal.app.low-ops.com/mcp"
+      "url": "${user_config.mcp_url}"
     }
   }
 }

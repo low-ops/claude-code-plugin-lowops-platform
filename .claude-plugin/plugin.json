@@ -12,17 +12,12 @@
     "platform"
   ],
   "userConfig": {
-    "mcp_base_url": {
+    "mcp_url": {
       "type": "string",
-      "title": "MCP base URL",
-      "description": "LowOps MCP server base URL (no trailing slash), e.g. https://mcp.lowops.example.com",
-      "sensitive": false
-    },
-    "api_token": {
-      "type": "string",
-      "title": "API token",
-      "description": "Bearer token for LowOps MCP (if required by your deployment)",
-      "sensitive": true
+      "title": "MCP URL",
+      "description": "LowOps MCP server URL, e.g. https://portal.lowops.example.com/mcp",
+      "sensitive": false,
+      "default": "https://portal.app.low-ops.com/mcp"
     }
   }
 }

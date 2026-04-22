@@ -5,7 +5,7 @@ Claude Code plugin for LowOps Platform: MCP-powered deploy and service managemen
 ## What you get
 
 - **Plugin id:** `lowops-platform` (namespaced commands and skills, e.g. `/lowops-platform:…`).
-- **Bundled MCP config** in [`.mcp.json`](.mcp.json): HTTP transport to your LowOps MCP server (placeholder URL via `userConfig`).
+- **Bundled MCP config** in [`.mcp.json`](.mcp.json): HTTP transport to your LowOps MCP server (URL templated with [`${user_config.mcp_url}`](https://code.claude.com/docs/en/plugins-reference#user-configuration) when the plugin is enabled in Claude Code).
 - **Co-located marketplace** in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) so this repository can be added as a marketplace and the plugin installed without a separate catalog repo.
 
 ## Install from GitHub
@@ -22,7 +22,7 @@ Claude Code plugin for LowOps Platform: MCP-powered deploy and service managemen
    /plugin install lowops-platform@lowops-platform-marketplace
    ```
 
-3. Enable the plugin if prompted, and fill in **MCP base URL** and **API token** (`userConfig` in [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)).
+3. Enable the plugin if prompted, and fill in **MCP URL** (`userConfig` in [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)).
 
 4. Reload plugins if you change files locally:
 
@@ -54,8 +54,9 @@ claude plugin validate .
 
 ## Configuration
 
-- **Preferred:** `userConfig` values collected when you enable the plugin (`mcp_base_url`, `api_token`). These substitute into [`.mcp.json`](.mcp.json).
-- **URLs:** `mcp_base_url` must **not** include a trailing slash; the plugin appends `/mcp`.
+- **Preferred:** `userConfig` values collected when you enable the plugin (`mcp_url` in [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)). Claude Code substitutes `${user_config.mcp_url}` in [`.mcp.json`](.mcp.json).
+- **URLs:** Use the full MCP endpoint (path included), e.g. `https://portal.example.com/mcp` — **no** trailing slash after `/mcp`.
+- **Other MCP clients** (e.g. Cursor) do not expand `${user_config.*}`; copy [`.mcp.json`](.mcp.json) and set `url` to the same string you would enter through the plugin.
 - **Security:** Do not commit real tokens. For private GitHub installs, ensure `git clone` works (credential helper or `GITHUB_TOKEN` / `GH_TOKEN` as applicable).
 
 ## Releases
