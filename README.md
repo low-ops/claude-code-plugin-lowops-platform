@@ -6,7 +6,7 @@ Claude Code plugin for LowOps Platform: MCP-powered deploy and service managemen
 
 - **Plugin id:** `lowops-platform` (namespaced commands and skills, e.g. `/lowops-platform:…`).
 - **Bundled MCP config** in [`.mcp.json`](.mcp.json): HTTP transport to your LowOps MCP server (URL templated with [`${user_config.mcp_url}`](https://code.claude.com/docs/en/plugins-reference#user-configuration) when the plugin is enabled in Claude Code).
-- **Bundled subagent** in [`agents/wait-package-build.md`](agents/wait-package-build.md): polls LowOps package status and waits until the package build is done (success/failure/timeout).
+- **Bundled subagents** in [`agents/`](agents): deployment/package waiters for long-running platform operations.
 - **Co-located marketplace** in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) so this repository can be added as a marketplace and the plugin installed without a separate catalog repo.
 
 ## Install from GitHub
@@ -37,13 +37,15 @@ Claude Code plugin for LowOps Platform: MCP-powered deploy and service managemen
    /mcp
    ```
 
-6. Check available agents and use the package watcher:
+6. Check available agents and use the waiters:
 
    ```text
    /agents
    ```
 
-   Then run the `wait-package-build` subagent when you need to block until a package build is complete.
+   Then run:
+   - `wait-package-build` to block until a package build completes.
+   - `wait-deploy` to block until environment deployment completes.
 
 Claude Code documentation: [Plugins](https://code.claude.com/docs/en/plugins), [MCP](https://code.claude.com/docs/en/mcp), [Plugin marketplaces](https://code.claude.com/docs/en/plugin-marketplaces).
 
@@ -86,6 +88,7 @@ Use [Conventional Commits](https://www.conventionalcommits.org/) on `main`, for 
 .mcp.json           # MCP server definitions
 agents/
   wait-package-build.md # Subagent for package build polling/waiting
+  wait-deploy.md        # Subagent for deployment status polling/waiting
 skills/lowops-platform/SKILL.md
 ```
 

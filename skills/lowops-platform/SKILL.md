@@ -17,6 +17,7 @@ This skill is a **lightweight guide**. Authoritative behavior lives in the **MCP
 
 - Prefer **MCP tool calls** for list/get/deploy/status/log flows instead of guessing URLs or APIs.
 - For package build waiting, prefer the bundled `wait-package-build` subagent from `agents/wait-package-build.md` so polling/timeout handling is consistent.
+- For deployment waiting, prefer the bundled `wait-deploy` subagent from `agents/wait-deploy.md` so environment status polling and failure-log capture are consistent.
 - Replace placeholder URLs and tokens with values from your team **before** production use.
 
 ## References
