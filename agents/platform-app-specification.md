@@ -14,7 +14,7 @@ Your goal is to ensure that the code developed always complies with the specific
 ## Generic
 
 - App must be cloud native which primarily means stateless
-- There must always be a Dockerfile that exposes the main app at port 8000 and use production best practices
+- There must always be a Dockerfile that exposes the main app at port 8000, port 3000 for nextjs and use production best practices
 - All html files and backend responses with dynamic content must include "No-Cache" headers.
 
 ## Local development
